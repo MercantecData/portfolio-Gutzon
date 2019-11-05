@@ -6,7 +6,7 @@ namespace OOP_Bibliotek
 {
     class Book
     {
-        public int id;
+        public string id;
         public string title;
         public DateTime returnDate;
 
@@ -34,6 +34,13 @@ namespace OOP_Bibliotek
         {
             this.title = title;
         }
+
+        public Book(string id, string title, DateTime returnDate)
+        {
+            this.id = id;
+            this.title = title;
+            this.returnDate = returnDate;
+        }
     }
 
 
@@ -43,9 +50,7 @@ namespace OOP_Bibliotek
         string path = @"C:\Users\keg\Desktop\Github\portfolio-Gutzon\OOP Bibliotek\OOP Bibliotek\Data\";
         public string id;
         public string name;
-        private List<string> booksId;
-        public List<Book> books;
-        private List<DateTime> booksReturnDate;
+        public List<Book> books = new List<Book>();
 
         public Boolean SaveBooksList()
         {
@@ -62,25 +67,26 @@ namespace OOP_Bibliotek
                 String[] spearator = { "$-T$", "$-D$" };
                 String[] strlist = value.Split(spearator, 3,
                 StringSplitOptions.RemoveEmptyEntries);
-                Console.WriteLine("Title: " + strlist[1]);
+                Book test2 = new Book(strlist[0], strlist[1], Convert.ToDateTime(strlist[2]));
+                books.Add(test2);
             }
- ;           
+            
         }
     }
-    class Inetialize
+    /*class Inetialize
     {
         string path = @"C:\Users\keg\Desktop\Github\portfolio-Gutzon\OOP Bibliotek\OOP Bibliotek\Data\";
         private List<Library> libraries;
 
-        /*public List<Library> LoadLibrary()
+        public List<Library> LoadLibrary()
         {
             string[] array = System.IO.File.ReadAllLines(path + " Libraries.txt");
             foreach (string element in array)
             {
 
             }
-        }*/
-    }
+        }
+    }*/
 
 }
 

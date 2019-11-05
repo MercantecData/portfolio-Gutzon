@@ -6,14 +6,41 @@ namespace OOP_Bibliotek
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Book book = new Book("test");
-            book.ReturnBook();
-            Inetialize index = new Inetialize();
-            Library library = new Library("0001","OOP Bibliotek");
+            Library library = new Library("0001", "OOP Bibliotek");
+            int input = 10;
+            while (input < 1 || input > 3)
+            {
+                WriteOptions();
+                while (Int32.TryParse(Console.ReadLine(), out input) != true)
+                {
+                    WriteOptions();
+                }
+                switch (input)
+                {
+                    case 1:
+
+                        break;
+                    case 2:
+
+                        break;
+                    case 3:
+
+                        break;
+                    default:
+
+                        break;
+                }
+            }
             
 
 
+        }
+        static void WriteOptions()
+        {
+            Console.Clear();
+            Console.WriteLine("1 - Lån en bog");
+            Console.WriteLine("2 - Aflevere en bog");
+            Console.WriteLine("3 - Forlæng udlånings tiden");
         }
     }
 }
