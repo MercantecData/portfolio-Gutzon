@@ -7,6 +7,13 @@ namespace OOP_Bibliotek
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Book book = new Book("test");
+            book.ReturnBook();
+            Inetialize index = new Inetialize();
+            Library library = new Library("0001","OOP Bibliotek");
+            
+
+
         }
     }
 }
