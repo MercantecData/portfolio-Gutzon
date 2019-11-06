@@ -6,8 +6,9 @@ namespace OOP_Bibliotek
     {
         static void Main(string[] args)
         {
+            
             Library library = new Library("0001", "OOP Bibliotek");
-            int input = 10;
+            int input = 0;
             while (input < 1 || input > 3)
             {
                 WriteOptions();
@@ -18,13 +19,16 @@ namespace OOP_Bibliotek
                 switch (input)
                 {
                     case 1:
-
+                        Console.WriteLine(library.books[0].returnDate);
+                        BorrowBook();
                         break;
                     case 2:
+                        Console.Clear();
 
+                        library.books[library.books.FindIndex()].ReturnBook();
                         break;
                     case 3:
-
+                        ExtendTime();
                         break;
                     default:
 
@@ -32,8 +36,6 @@ namespace OOP_Bibliotek
                 }
             }
             
-
-
         }
         static void WriteOptions()
         {
@@ -41,6 +43,18 @@ namespace OOP_Bibliotek
             Console.WriteLine("1 - Lån en bog");
             Console.WriteLine("2 - Aflevere en bog");
             Console.WriteLine("3 - Forlæng udlånings tiden");
+        }
+        static void BorrowBook()
+        {
+            
+        }
+        static void ReturnBook()
+        {
+
+        }
+        static void ExtendTime()
+        {
+
         }
     }
 }
