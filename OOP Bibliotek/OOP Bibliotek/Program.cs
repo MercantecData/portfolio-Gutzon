@@ -25,7 +25,7 @@ namespace OOP_Bibliotek
                     case 2:
                         Console.Clear();
 
-                        library.books[library.books.FindIndex()].ReturnBook();
+                        //library.books[library.books.FindIndex()].ReturnBook();
                         break;
                     case 3:
                         ExtendTime();
