@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace OOP_Bibliotek
 {
@@ -16,7 +15,7 @@ namespace OOP_Bibliotek
             if (this.returnDate.Year == 1)
             {
                 this.returnDate = returnDate;
-                Console.WriteLine("Bogen \"" + this.title + "\" er udlånt indtil: " + returnDate);
+                
                 return true;
             }
             else
@@ -55,6 +54,68 @@ namespace OOP_Bibliotek
         public Boolean SaveBooksList()
         {
             return true;
+        }
+        public Boolean ReturnBookById(string id)
+        {
+            int i = 0;
+            Boolean succes = false;
+            while (i < books.Count)
+            {
+                if (books[i].id == id )
+                {
+                    books[i].ReturnBook();
+                    i = books.Count;
+                    succes = true;
+                }
+            }
+            return succes;
+        }
+        public string ReturnBookByTitle(string title)
+        {
+            int i = 0;
+            string returnMessage = "";
+            while (i < books.Count)
+            {
+                if (books[i].title == title)
+                {
+                    books[i].ReturnBook();
+                    i = books.Count;
+                    returnMessage = "Bogen: "+title+" Blev afleveret";
+                }
+                else
+                {
+                    returnMessage = "Kunne ikke finde en bog med navnet: "+title;
+                }
+                i += 1;
+            }
+            return returnMessage;
+        }
+        public string CheckStatusOnBookByTitle(string name)
+        {
+            int i = 0;
+            string returnMessage = "";
+            while (i < books.Count)
+            {
+                if (books[i].title == name)
+                {
+                    if (books[i].returnDate.Year == 1)
+                    {
+                        books[i].ReturnBook();
+                        returnMessage = "Bogen: " + name + " Er Hjemme";
+                    }
+                    else
+                    {
+                        returnMessage = "Bogen: " + name + " Er udlånt indtil: " + books[i].returnDate.Day +"/"+ books[i].returnDate.Month +"-"+ books[i].returnDate.Year;
+                    }
+                    i = books.Count;
+                }
+                else
+                {
+                    returnMessage = "Kunne ikke finde en bog med navnet: " + name;
+                }
+                i += 1;
+            }
+            return returnMessage;
         }
 
         public Library(string id, string name)
