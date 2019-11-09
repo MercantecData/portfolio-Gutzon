@@ -6,7 +6,7 @@ namespace ConsoleApp1
 {
     class Bike
     {
-        public readonly string manifactor;
+        public string manifactor { get; private set; };
         public readonly string color;
         public readonly double wheelSize;
 
