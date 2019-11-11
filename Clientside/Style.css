@@ -27,3 +27,14 @@ body{
     left: 30px;
     font-size: 12px;
 }
+.linkbutton{
+    
+}
+.iframe{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    height: 100%;
+    width: 55%;
+    border: none;
+}
