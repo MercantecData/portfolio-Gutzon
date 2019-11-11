@@ -1,0 +1,29 @@
+body{
+    background-color: aliceblue;
+
+
+}
+.image{
+    position: absolute;
+    left: 30px;
+    top: 200px;
+    width: 30%;
+}
+.title{
+    position: absolute;
+    text-align: left;
+    top: 10px;
+    left: 30px;
+}
+.about{
+    position: absolute;
+    text-align: left;
+    top: 60px;
+    left: 30px;
+}
+.links{
+    position: absolute;
+    top: 600px;
+    left: 30px;
+    font-size: 12px;
+}
