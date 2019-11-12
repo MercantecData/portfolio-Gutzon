@@ -1,13 +1,18 @@
+@font-face {
+    font-family: "Roadgeek2014SeriesC";
+    src: url("Roadgeek 2005 Series C.otf");
+}
 body{
-    background-color: aliceblue;
-
+    background-color: #f0f8ff;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 .image{
     position: absolute;
     left: 30px;
     top: 200px;
-    width: 30%;
+    width: auto;
+    max-height: 400px;
 }
 .title{
     position: absolute;
@@ -23,12 +28,9 @@ body{
 }
 .links{
     position: absolute;
-    top: 600px;
+    top: 620px;
     left: 30px;
     font-size: 12px;
-}
-.linkbutton{
-    
 }
 .iframe{
     position: absolute;
@@ -37,4 +39,27 @@ body{
     height: 100%;
     width: 55%;
     border: none;
+}
+.canvas{
+    position: absolute;
+    bottom: 0%;
+    left: 360px;
+    height: 250px;
+    width: auto;
+}
+
+.My_Button{
+    background: linear-gradient(0deg, rgb(255, 160, 160) 0%, rgb(255, 220, 220) 100%);
+    display: inline;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 2px;
+    cursor: pointer;
+    border: 1px solid rgb(255, 160, 160);
+}
+.My_Button:hover{
+    background: linear-gradient(0deg, rgb(255, 170, 170) 0%, rgb(255, 230, 230) 100%);
+}
+.My_Button:active{
+    background: linear-gradient(0deg, rgb(255, 220, 220) 0%, rgb(255, 160, 160) 100%);
 }
