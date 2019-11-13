@@ -22,6 +22,22 @@ function buttonclick(button,url){
     }
 
 }
+//fjerner et element (Uret/Canvas)
+function RemoveClock(button){
+    document.getElementById("ur").remove();
+    button.setAttribute("onclick","ShowClock(this)") ;
+    button.innerHTML ="Vis Uret";
+}
+//Indsætter uret igen
+function ShowClock(button){
+    var canvas = document.createElement("canvas");
+    canvas.setAttribute("id","ur") ;
+    canvas.className = "canvas";
+    document.getElementById("fill").appendChild(canvas);
+    button.setAttribute("onclick","RemoveClock(this)") ;
+    button.innerHTML ="Fjern Uret";
+    clockload();
+}
 
 //Ur begynder her.
 var canvas;
