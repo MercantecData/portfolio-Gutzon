@@ -2,6 +2,7 @@ function onload(){
 clockload();
 }
 
+//Ændre minimum en knap + Ændre en iframe.
 function buttonclick(button,url){
     var iframe = document.getElementsByClassName("iframe")[0];
     if (button.className == "My_Button Viewing")
@@ -28,7 +29,7 @@ function RemoveClock(button){
     button.setAttribute("onclick","ShowClock(this)") ;
     button.innerHTML ="Vis Uret";
 }
-//Indsætter uret igen
+//Indsætter uret igen. Den indsætter et element og ændre tekst i en knap.
 function ShowClock(button){
     var canvas = document.createElement("canvas");
     canvas.setAttribute("id","ur") ;
@@ -36,7 +37,7 @@ function ShowClock(button){
     document.getElementById("fill").appendChild(canvas);
     button.setAttribute("onclick","RemoveClock(this)") ;
     button.innerHTML ="Fjern Uret";
-    clockload();
+    clockload(); //Starter uret
 }
 
 //Ur begynder her.
