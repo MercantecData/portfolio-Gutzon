@@ -5,7 +5,13 @@
 body{
     background-color: #f0f8ff;
     font-family: Arial, Helvetica, sans-serif;
-
+    display: grid;
+    grid-template-areas:
+    'header header header header header'
+    'menu main main right ur'
+    'menu main main right log'
+    'menu main main right log'
+    'footer footer footer footer footer';
 }
 .image{
     position: absolute;
@@ -84,7 +90,7 @@ body{
     position: absolute;
     bottom: 1%;
     left: 300px;
-    width: auto;
+    width: 100px;
 }
 .textbox{
     position: absolute;
