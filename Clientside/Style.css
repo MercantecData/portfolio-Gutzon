@@ -3,61 +3,65 @@
     src: url("Roadgeek 2005 Series C.otf");
 }
 body{
+    margin: 0px;
     background-color: #f0f8ff;
     font-family: Arial, Helvetica, sans-serif;
     display: grid;
     grid-template-areas:
-    'header header header header header'
-    'menu main main right ur'
-    'menu main main right log'
-    'menu main main right log'
-    'footer footer footer footer footer';
+    'header header header header header header'
+    'about main main main main ur'
+    'menu main main main main image'
+    'menu main main main main textbox'
+    'links links footer footer footer footer';
+    grid-auto-rows: 50px 260px auto 146px 100px;
+    grid-auto-columns: 300px auto auto auto auto 260px;
+    
 }
 .image{
-    position: absolute;
-    left: 30px;
-    top: 200px;
-    width: auto;
-    max-height: 400px;
+    margin-right: 50px;
+    max-width: 150px;
+    grid-area: image;
+    justify-self: end;
 }
 .title{
-    position: absolute;
-    text-align: left;
-    top: 10px;
-    left: 30px;
+    margin-top: 10px;
+    text-align: center;
+    grid-area: header;
+    justify-self: center;
 }
 .about{
-    position: absolute;
     text-align: left;
-    top: 60px;
-    left: 30px;
+    grid-area: about;
 }
 .links{
     display: grid;
     grid-template-columns: auto auto 100px;
-    grid-template-rows: 15px 15px;
+    grid-template-rows: 30px 15px 15px;
     grid-row-gap: 2px;
-    position: absolute;
-    width: auto;
-    top: 620px;
-    left: 5px;
+    width: 350px;
     font-size: 12px;
+    grid-area: links;
+}
+.linkstitle{
+    grid-area: 1 / span 3;
 }
 .iframe{
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
+    width: 100%;
     height: 100%;
-    width: 55%;
     border: none;
     z-index: 100;
+    grid-area: main;
 }
 .canvas{
-    position: absolute;
-    bottom: 40%;
-    left: 360px;
+    right: 2px;
     height: 250px;
     width: auto;
+}
+.fill{
+    grid-area: ur;
+    width: 250px;
+    height: 262px;
+    justify-self: end;
 }
 
 .My_Button{
@@ -87,17 +91,15 @@ body{
     padding: none;
 }
 .Remove_Clock_Button{
-    position: absolute;
-    bottom: 1%;
-    left: 300px;
+    margin-left: 150px;
     width: 100px;
 }
 .textbox{
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-    height: 100%;
-    width: 55%;
-    border: none;
+    width: 100%;
+    border: solid gray;
     z-index: 50;
+    grid-area: textbox;
+}
+footer{
+grid-area: footer;
 }
