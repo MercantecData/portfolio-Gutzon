@@ -1,5 +1,12 @@
 function onload(){
 clockload();
+var inputfield = document.getElementsByClassName("textfield")[0];
+inputfield.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    PostMessage()
+  }
+});
 }
 
 //Ændre minimum en knap + Ændre en iframe.
@@ -39,6 +46,11 @@ function ShowClock(button){
     button.innerHTML ="Fjern Uret";
     clockload(); //Starter uret
 }
+function PostMessage(){
+    document.getElementsByClassName("textbox")[0].innerHTML=document.getElementsByClassName("textfield")[0].value;
+    document.getElementsByClassName("textfield")[0].value ="";
+}
+
 
 //Ur begynder her.
 var canvas;

@@ -12,7 +12,7 @@ body{
     'about main main main main ur'
     'menu main main main main image'
     'menu main main main main textbox'
-    'links links footer footer footer footer';
+    'links links footer footer footer textinput';
     grid-auto-rows: 50px 260px auto 146px 100px;
     grid-auto-columns: 300px auto auto auto auto 260px;
     
@@ -97,9 +97,17 @@ body{
 .textbox{
     width: 100%;
     border: solid gray;
-    z-index: 50;
     grid-area: textbox;
+    -webkit-user-select: none;
+    -moz-user-select: none;   
+    -ms-user-select: none; 
 }
 footer{
 grid-area: footer;
+}
+.textinput{
+grid-area: textinput;
+width: 100%;
+justify-self: end;
+
 }

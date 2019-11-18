@@ -11,7 +11,7 @@
 <body onload="onload()">
 		<img class="image" src="https://www.ucholstebro.dk/media/4842/kennie-groth_grey.jpg"/>
 		<iframe class ="iframe" src=""></iframe>
-		<b class="textbox">test</b>
+		<b class="textbox"></b>
         <h1 class="title">
             Kennie Gutzon Mynster Groth
 		</h1>
@@ -36,10 +36,14 @@
 			<a href="https://www.ucholstebro.dk">Uddannelsescenter Holstebro (UCH)</a>
 			<div class="My_Button" onclick="buttonclick(this,'https://www.ucholstebro.dk')">Preview</div>
 		</div>
-		<div id="fill">
+		<div id="fill" class="fill">
 			<div class="My_Button Remove_Clock_Button" onclick="RemoveClock(this)">Fjern Uret</div>
 			<br>
 			<canvas id="ur" class="canvas"></canvas>
+		</div>
+		<div class="textinput">
+			<input type="text"class="textfield"/>
+			<div class="My_Button"onclick="PostMessage()">Send</div>
 		</div>
 		
 
