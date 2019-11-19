@@ -79,7 +79,7 @@ namespace Overloading_Math
         public int Kvadratrod(int n)
         {
             int i = 1;
-            while (i * i >= n)
+            while (i * i < n)
             {
                 i += 1;
             }
@@ -87,7 +87,7 @@ namespace Overloading_Math
         }
         public float Kvadratrod(float n)
         {
-            return Kvadratrod(n);
+            return Kvadratrod((int) n);
         }
         public int Kvadratrod(string s)
         {
@@ -108,7 +108,7 @@ namespace Overloading_Math
         }
         public float Potens(float n1, float n2)
         {
-            return Potens(n1, n2);
+            return Potens((int) n1,(int) n2);
         }
         public int Potens(string s1, string s2)
         {
