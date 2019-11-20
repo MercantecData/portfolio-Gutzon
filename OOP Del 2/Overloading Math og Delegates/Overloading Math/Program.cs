@@ -92,8 +92,6 @@ namespace Overloading_Math
             Console.WriteLine("Kvadratroden af 64 = " + math1Int((int)64));
             Console.WriteLine("Kvadratroden af 9 = " + math1Float((float)9));
             Console.WriteLine("Kvadratroden af 625 = " + math1String("625"));
-
-
         }
     }
 }

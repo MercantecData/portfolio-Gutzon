@@ -8,8 +8,7 @@ namespace Overloading_Math
     {
         private int StringToInt(string s)
         {
-            int n;
-            if (Int32.TryParse(s, out n) != true)
+            if (Int32.TryParse(s, out int n) != true)
             {
                 n = 0;
             }
@@ -101,7 +100,7 @@ namespace Overloading_Math
             int j = n1;
             while (i < n2)
             {
-                j = j * n1;
+                j *= n1;
                 i += 1;
             }
             return j;
