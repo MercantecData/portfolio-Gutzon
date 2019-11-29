@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2019 at 08:47 AM
+-- Generation Time: Nov 29, 2019 at 11:09 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -21,6 +21,18 @@ SET time_zone = "+00:00";
 --
 -- Database: `job`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `deparmentmanagers`
+-- (See below for the actual view)
+--
+CREATE TABLE `deparmentmanagers` (
+`department_Name` varchar(256)
+,`first_Name` varchar(256)
+,`last_Name` varchar(256)
+);
 
 -- --------------------------------------------------------
 
@@ -170,6 +182,7 @@ CREATE TABLE `showemployees` (
 ,`salary_Value` decimal(10,0)
 ,`salary_Bonus` decimal(10,0)
 ,`manager_Salary_Bonus` decimal(10,0)
+,`Total_Salary` decimal(12,0)
 );
 
 -- --------------------------------------------------------
@@ -203,11 +216,20 @@ INSERT INTO `titles` (`title_ID`, `salary_ID`, `title_Name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Structure for view `deparmentmanagers`
+--
+DROP TABLE IF EXISTS `deparmentmanagers`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `deparmentmanagers`  AS  select `department`.`department_Name` AS `department_Name`,`employee`.`first_Name` AS `first_Name`,`employee`.`last_Name` AS `last_Name` from ((`department` left join `dep_manager` on(`dep_manager`.`dep_Manager_ID` = `department`.`dep_Manager_ID`)) left join `employee` on(`dep_manager`.`employ_ID` = `employee`.`employ_ID`)) ;
+
+-- --------------------------------------------------------
+
+--
 -- Structure for view `showemployees`
 --
 DROP TABLE IF EXISTS `showemployees`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `showemployees`  AS  select `employee`.`first_Name` AS `first_Name`,`employee`.`last_Name` AS `last_Name`,`employee`.`address` AS `address`,`employee`.`zip_Code` AS `zip_Code`,`titles`.`title_Name` AS `title_Name`,`department`.`department_Name` AS `department_Name`,`salaries`.`salary_Value` AS `salary_Value`,`dep_employee`.`salary_Bonus` AS `salary_Bonus`,`dep_manager`.`salary_Bonus` AS `manager_Salary_Bonus` from (((((`employee` join `dep_employee` on(`employee`.`employ_ID` = `dep_employee`.`employ_ID`)) left join `department` on(`department`.`department_ID` = `dep_employee`.`department_ID`)) left join `titles` on(`dep_employee`.`title_ID` = `titles`.`title_ID`)) left join `salaries` on(`titles`.`salary_ID` = `salaries`.`salary_ID`)) left join `dep_manager` on(`employee`.`employ_ID` = `dep_manager`.`employ_ID` and `dep_manager`.`department_ID` = `department`.`department_ID`)) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `showemployees`  AS  select `employee`.`first_Name` AS `first_Name`,`employee`.`last_Name` AS `last_Name`,`employee`.`address` AS `address`,`employee`.`zip_Code` AS `zip_Code`,`titles`.`title_Name` AS `title_Name`,`department`.`department_Name` AS `department_Name`,`salaries`.`salary_Value` AS `salary_Value`,`dep_employee`.`salary_Bonus` AS `salary_Bonus`,`dep_manager`.`salary_Bonus` AS `manager_Salary_Bonus`,`salaries`.`salary_Value` + `dep_employee`.`salary_Bonus` + ifnull(`dep_manager`.`salary_Bonus`,0) AS `Total_Salary` from (((((`employee` join `dep_employee` on(`employee`.`employ_ID` = `dep_employee`.`employ_ID`)) left join `department` on(`department`.`department_ID` = `dep_employee`.`department_ID`)) left join `titles` on(`dep_employee`.`title_ID` = `titles`.`title_ID`)) left join `salaries` on(`titles`.`salary_ID` = `salaries`.`salary_ID`)) left join `dep_manager` on(`employee`.`employ_ID` = `dep_manager`.`employ_ID` and `dep_manager`.`department_ID` = `department`.`department_ID`)) ;
 
 --
 -- Indexes for dumped tables
