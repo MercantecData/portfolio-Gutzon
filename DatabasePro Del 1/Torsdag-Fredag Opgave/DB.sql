@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2019 at 06:13 AM
+-- Generation Time: Nov 29, 2019 at 08:47 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -157,6 +157,24 @@ INSERT INTO `salaries` (`salary_ID`, `salary_Value`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Stand-in structure for view `showemployees`
+-- (See below for the actual view)
+--
+CREATE TABLE `showemployees` (
+`first_Name` varchar(256)
+,`last_Name` varchar(256)
+,`address` varchar(256)
+,`zip_Code` int(20)
+,`title_Name` varchar(256)
+,`department_Name` varchar(256)
+,`salary_Value` decimal(10,0)
+,`salary_Bonus` decimal(10,0)
+,`manager_Salary_Bonus` decimal(10,0)
+);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `titles`
 --
 
@@ -181,6 +199,15 @@ INSERT INTO `titles` (`title_ID`, `salary_ID`, `title_Name`) VALUES
 (8, 5, 'consultant'),
 (9, 6, 'Manager'),
 (10, 7, 'Owner');
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `showemployees`
+--
+DROP TABLE IF EXISTS `showemployees`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `showemployees`  AS  select `employee`.`first_Name` AS `first_Name`,`employee`.`last_Name` AS `last_Name`,`employee`.`address` AS `address`,`employee`.`zip_Code` AS `zip_Code`,`titles`.`title_Name` AS `title_Name`,`department`.`department_Name` AS `department_Name`,`salaries`.`salary_Value` AS `salary_Value`,`dep_employee`.`salary_Bonus` AS `salary_Bonus`,`dep_manager`.`salary_Bonus` AS `manager_Salary_Bonus` from (((((`employee` join `dep_employee` on(`employee`.`employ_ID` = `dep_employee`.`employ_ID`)) left join `department` on(`department`.`department_ID` = `dep_employee`.`department_ID`)) left join `titles` on(`dep_employee`.`title_ID` = `titles`.`title_ID`)) left join `salaries` on(`titles`.`salary_ID` = `salaries`.`salary_ID`)) left join `dep_manager` on(`employee`.`employ_ID` = `dep_manager`.`employ_ID` and `dep_manager`.`department_ID` = `department`.`department_ID`)) ;
 
 --
 -- Indexes for dumped tables
