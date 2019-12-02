@@ -1,0 +1,14 @@
+list sort
+
+Med Delgate Func
+
+
+
+
+base contructors
+
+
+Skriv mail inden klokken 8 mach
+Lav et commit inden 12 (skriv status i about)
+
+Spørgsmål Lav issues på github
