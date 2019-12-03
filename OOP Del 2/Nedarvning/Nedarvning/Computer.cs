@@ -18,6 +18,7 @@ namespace Nedarvning
         {
             return (manufacture, cost, cpu, productID, modelID, osVersion, gpu);
         }
+       
 
     }
     class AllInOnePC : Desktop
