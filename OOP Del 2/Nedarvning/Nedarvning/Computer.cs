@@ -14,7 +14,7 @@ namespace Nedarvning
         public string osVersion;
         public string gpu;
 
-        public string GetComputerInfo()
+        public virtual string GetComputerInfo()
         {
             return "Product Type: Computer.\nManufactor: "+manufacture+".\nCost: "+cost+". \nCPU: "+cpu+". \nProduct ID: "+productID+". \nModel ID: "+modelID+". \nOS Version: "+osVersion+". \nGPU: "+gpu+".";
         }
@@ -24,7 +24,7 @@ namespace Nedarvning
     {
         public Screen screen;
 
-        public string GetAllInOneInfo()
+        public  override string GetComputerInfo()
         {
             return GetDesktopInfo().Replace("Product Type: Desktop.", "Product Type: All In One PC.") + "\nScreen Resolution: "+ screen.pixelCountX+" X "+screen.pixelCounty+". \nScreen Size: "+screen.screenSize+"\". \nTouch Points: "+screen.pointsTouchScreen+".";
         }
