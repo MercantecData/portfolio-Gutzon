@@ -6,7 +6,7 @@ namespace Abstract_Classes_and_Interfaces
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
