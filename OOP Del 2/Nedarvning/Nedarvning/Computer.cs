@@ -14,34 +14,38 @@ namespace Nedarvning
         public string osVersion;
         public string gpu;
 
-        public (string, double, string, string, string, string, string) GetComputerInfo()
+        public string GetComputerInfo()
         {
-            return (manufacture, cost, cpu, productID, modelID, osVersion, gpu);
+            return "Product Type: Computer.\nManufactor: "+manufacture+".\nCost: "+cost+". \nCPU: "+cpu+". \nProduct ID: "+productID+". \nModel ID: "+modelID+". \nOS Version: "+osVersion+". \nGPU: "+gpu+".";
         }
-       
 
     }
     class AllInOnePC : Desktop
     {
         public Screen screen;
 
-        public (string, double, string, string, string, string, string, int[], Screen) GetAllInOneInfo()
+        public string GetAllInOneInfo()
         {
-            return (GetDesktopInfo().Item1, GetDesktopInfo().Item2, GetDesktopInfo().Item3, GetDesktopInfo().Item4, GetDesktopInfo().Item5, GetDesktopInfo().Item6, GetDesktopInfo().Item7, GetDesktopInfo().Item8, screen);
+            return GetDesktopInfo().Replace("Product Type: Desktop.", "Product Type: All In One PC.") + "\nScreen Resolution: "+ screen.pixelCountX+" X "+screen.pixelCounty+". \nScreen Size: "+screen.screenSize+"\". \nTouch Points: "+screen.pointsTouchScreen+".";
         }
     }
     class Laptop : Computer
     {
         public Screen screen;
-
+        public string GetLaptopInfo()
+        {
+            return GetComputerInfo().Replace("Product Type: Computer.", "Product Type: Laptop.") + "\nScreen Resolution: " + screen.pixelCountX + " X " + screen.pixelCounty + ". \nScreen Size: " + screen.screenSize + "\". \nTouch Points: " + screen.pointsTouchScreen + ".";
+        }
     }
     class Desktop : Computer
     {
-        public int[] caseSize;
+        public int caseHeight;
+        public int caseWidth;
+        public int caseDepth;
 
-        public (string, double, string, string, string, string, string, int[]) GetDesktopInfo()
+        public string GetDesktopInfo()
         {
-            return (GetComputerInfo().Item1, GetComputerInfo().Item2, GetComputerInfo().Item3, GetComputerInfo().Item4, GetComputerInfo().Item5, GetComputerInfo().Item6, GetComputerInfo().Item7, caseSize); 
+           return GetComputerInfo().Replace("Product Type: Computer.", "Product Type: Desktop.")+"\nCase Height: "+caseHeight+".\nCase Width: "+caseWidth+". \nCase Depth: "+caseDepth+"."; 
         }
     }
 
@@ -49,7 +53,10 @@ namespace Nedarvning
     {
         public Screen screen;
         public string simCard;
-
+        public string GetMobilInfo()
+        {
+            return GetComputerInfo().Replace("Product Type: Computer.", "Product Type: Mobile Phone.") + "\nScreen Resolution: " + screen.pixelCountX + " X " + screen.pixelCounty + ". \nScreen Size: " + screen.screenSize + "\". \nTouch Points: " + screen.pointsTouchScreen + ". \nSim Card Type: "+simCard+".";
+        }
     }
 
 
