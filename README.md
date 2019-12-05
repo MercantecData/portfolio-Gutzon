@@ -14,5 +14,10 @@ Lavede Library opgaven. (Kunne ikke finde p hvilke classes jeg skulle lave i Abs
 undersøgte om Asynchronous Programming og Tasks
 
 
+Okay så overide er den måde man kan få dataen fra en subclasse there er gemt under dens superclass.
+Jeg misforstod hvad du mente med override troede ikke at det var en modifier man kunne give en function.
+
 Torsdag	(5/12-2019) Status: 
+
+
 Fredag	(2/12-2019) Status: 

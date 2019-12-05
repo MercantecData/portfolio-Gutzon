@@ -21,8 +21,7 @@ namespace Nedarvning
             all.osVersion = "Windows 10 Pro";
             all.screen = new Screen(15.6, 10, 1920, 1080);
             pclist.Add(all);
-            //Console.WriteLine(pclist[0].GetComputerInfo());
-            Console.WriteLine(all.GetAllInOneInfo());
+            Console.WriteLine(pclist[0].GetComputerInfo());
         }
     }
 }

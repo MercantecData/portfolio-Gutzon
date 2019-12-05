@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Nedarvning
+namespace Abstract_Classes_and_Interfaces
 {
-    class Computer
+    abstract class Computer
     {
         public string manufacture;
         public double cost;
@@ -14,19 +14,16 @@ namespace Nedarvning
         public string osVersion;
         public string gpu;
 
-        public virtual string GetComputerInfo()
-        {
-            return "Product Type: Computer.\nManufactor: "+manufacture+".\nCost: "+cost+". \nCPU: "+cpu+". \nProduct ID: "+productID+". \nModel ID: "+modelID+". \nOS Version: "+osVersion+". \nGPU: "+gpu+".";
-        }
+        public abstract string GetComputerInfo();
 
     }
     class AllInOnePC : Desktop
     {
         public Screen screen;
 
-        public  override string GetComputerInfo()
+        public override string GetComputerInfo()
         {
-            return "Product Type: All In One PC.\nManufactor: " + manufacture + ".\nCost: " + cost + ". \nCPU: " + cpu + ". \nProduct ID: " + productID + ". \nModel ID: " + modelID + ". \nOS Version: " + osVersion + ". \nGPU: " + gpu + ". \nCase Height: " + caseHeight + ".\nCase Width: " + caseWidth + ". \nCase Depth: " + caseDepth + ". \nScreen Resolution: " + screen.pixelCountX+" X "+screen.pixelCounty+". \nScreen Size: "+screen.screenSize+"\". \nTouch Points: "+screen.pointsTouchScreen+".";
+            return "Product Type: All In One PC.\nManufactor: " + manufacture + ".\nCost: " + cost + ". \nCPU: " + cpu + ". \nProduct ID: " + productID + ". \nModel ID: " + modelID + ". \nOS Version: " + osVersion + ". \nGPU: " + gpu + ". \nCase Height: " + caseHeight + ".\nCase Width: " + caseWidth + ". \nCase Depth: " + caseDepth + ". \nScreen Resolution: " + screen.pixelCountX + " X " + screen.pixelCounty + ". \nScreen Size: " + screen.screenSize + "\". \nTouch Points: " + screen.pointsTouchScreen + ".";
         }
     }
     class Laptop : Computer
@@ -45,7 +42,7 @@ namespace Nedarvning
 
         public override string GetComputerInfo()
         {
-           return "Product Type: Desktop.\nManufactor: " + manufacture + ".\nCost: " + cost + ". \nCPU: " + cpu + ". \nProduct ID: " + productID + ". \nModel ID: " + modelID + ". \nOS Version: " + osVersion + ". \nGPU: " + gpu + ". \nCase Height: "+caseHeight+".\nCase Width: "+caseWidth+". \nCase Depth: "+caseDepth+"."; 
+            return "Product Type: Desktop.\nManufactor: " + manufacture + ".\nCost: " + cost + ". \nCPU: " + cpu + ". \nProduct ID: " + productID + ". \nModel ID: " + modelID + ". \nOS Version: " + osVersion + ". \nGPU: " + gpu + ". \nCase Height: " + caseHeight + ".\nCase Width: " + caseWidth + ". \nCase Depth: " + caseDepth + ".";
         }
     }
 
@@ -55,7 +52,7 @@ namespace Nedarvning
         public string simCard;
         public override string GetComputerInfo()
         {
-            return "Product Type: Mobile Phone.\nManufactor: " + manufacture + ".\nCost: " + cost + ". \nCPU: " + cpu + ". \nProduct ID: " + productID + ". \nModel ID: " + modelID + ". \nOS Version: " + osVersion + ". \nGPU: " + gpu + ". \nScreen Resolution: " + screen.pixelCountX + " X " + screen.pixelCounty + ". \nScreen Size: " + screen.screenSize + "\". \nTouch Points: " + screen.pointsTouchScreen + ". \nSim Card Type: "+simCard+".";
+            return "Product Type: Mobile Phone.\nManufactor: " + manufacture + ".\nCost: " + cost + ". \nCPU: " + cpu + ". \nProduct ID: " + productID + ". \nModel ID: " + modelID + ". \nOS Version: " + osVersion + ". \nGPU: " + gpu + ". \nScreen Resolution: " + screen.pixelCountX + " X " + screen.pixelCounty + ". \nScreen Size: " + screen.screenSize + "\". \nTouch Points: " + screen.pointsTouchScreen + ". \nSim Card Type: " + simCard + ".";
         }
     }
 
