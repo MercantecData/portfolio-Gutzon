@@ -18,6 +18,10 @@ Okay så overide er den måde man kan få dataen fra en subclasse there er gemt 
 Jeg misforstod hvad du mente med override troede ikke at det var en modifier man kunne give en function.
 
 Torsdag	(5/12-2019) Status: 
+Prøvede og forstå Interfaces og IComparable. (uden Meget held)
+Har brug for nogle bedre exempler på brugen af dem.
+
+Lavede Multithreading med Tasks (Gæt tallet spil)
 
 
 Fredag	(2/12-2019) Status: 
