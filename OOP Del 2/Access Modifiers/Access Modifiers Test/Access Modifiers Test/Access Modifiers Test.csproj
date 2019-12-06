@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <RootNamespace>Access_Modifiers_Test</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Access Modifiers DLL">
+      <HintPath>..\..\Access Modifiers DLL\Access Modifiers DLL\bin\Debug\netstandard2.0\Access Modifiers DLL.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
