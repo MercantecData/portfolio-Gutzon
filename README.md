@@ -7,7 +7,8 @@ Læste opgaverne igennem.
 
 
 
-Tirsdag	(10/12-2019) Status: 
+Tirsdag	(10/12-2019) Status:
+Sample Database
 Repetition
 
 
