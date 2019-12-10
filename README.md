@@ -8,7 +8,7 @@ Læste opgaverne igennem.
 
 
 Tirsdag	(10/12-2019) Status: 
-
+Repetition
 
 
 Onsdag	(11/12-2019) Status:
