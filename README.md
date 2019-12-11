@@ -13,6 +13,7 @@ Repetition
 
 
 Onsdag	(11/12-2019) Status:
+Views og Stored procedures
 
 
 
