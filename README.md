@@ -20,9 +20,9 @@ Views og Stored procedures
 
 
 Torsdag	(12/12-2019) Status: 
-
-
-
+Database restore
+Triggers
+Gitkraken ville ikke pushe så jeg oploaded readme filen selv
 
 
 
