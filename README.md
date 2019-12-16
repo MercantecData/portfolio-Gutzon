@@ -2,9 +2,8 @@ portfolio-Gutzon
 
 
 
-Mandag	(9/12-2019) Status: 
-Læste opgaverne igennem.
-
+Mandag	(16/12-2019) Status: 
+Prøve og komme på en god idé til en hjemmeside.
 
 
 Tirsdag	(10/12-2019) Status:
