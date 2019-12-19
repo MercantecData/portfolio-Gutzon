@@ -6,23 +6,19 @@ Mandag	(16/12-2019) Status:
 Prøve og komme på en god idé til en hjemmeside.
 
 
-Tirsdag	(10/12-2019) Status:
-Sample Database
-Repetition
+Tirsdag	(17/12-2019) Status:
+Ventede på svar om min idé var godgendt.
+Begynde at designe CSS til rubrikscube
 
 
-Onsdag	(11/12-2019) Status:
-Views og Stored procedures
+Onsdag	(18/12-2019) Status:
+Forsatte med rubrikscude ( prøvede en anden måde at løse det på.
 
 
-
-
-
-Torsdag	(12/12-2019) Status: 
-Database restore
-Triggers
-Gitkraken ville ikke pushe så jeg oploaded readme filen selv
+Torsdag	(19/12-2019) Status: 
+Rubrikscuben har stadig fejl med nogle rotationer.
+Kom på en måde der måske kunne fixe det. Men kræver at jeg næsten starter forfra med at opbygge Rubriks cuben
 
 
 
-Fredag	(6/12-2019) Status: 
+Fredag	(20/12-2019) Status: 
