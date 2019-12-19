@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="RubricStyle.css">
+    <link rel="stylesheet" type="text/css" href="Mystyle.css">
+    <script type="text/javascript" src="Myjs.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>
+
+    </title>
+
+</head>
+
+<body onload="onload()" style="background-color: grey;">
+<div onclick="rotate('Orange_Side', -90)"">back</div>
+<div onclick="rotate('Orange_Side', 90)"">test</div>
+<div onclick="rotate('Blue_Side', -90)"">back</div>
+<div onclick="rotate('Blue_Side', 90)"">test</div>
+
+    <div id="RubriksCube">
+        <div id="Cube1">
+            <div class="Side1">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="White"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="Cube2">
+            <div class="Side2">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Yellow"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="Cube3">
+            <div class="Side3">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Blue"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="Cube4">
+            <div class="Side5">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Red"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="Cube5">
+            <div class="Side4">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Orange"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="Cube6">
+            <div class="Side6">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Green"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="Cube7">
+            <div class="Side1">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="White"></div>
+                <div></div>
+            </div>
+            <div class="Side3">
+                <div></div>
+                <div class="Blue"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="Cube8">
+            <div class="Side1">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="White"></div>
+            </div>
+            <div class="Side3">
+                <div></div>
+                <div></div>
+                <div class="Blue"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Side4">
+                <div class="Orange"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="Cube9">
+            <div class="Side1">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="White"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Side4">
+                <div></div>
+                <div class="Orange"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="Cube10">
+            <div class="Side1">
+                <div></div>
+                <div></div>
+                <div class="White"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Side6">
+                <div class="Green"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Side4">
+                <div></div>
+                <div></div>
+                <div class="Orange"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="Cube11">
+            <div class="Side1">
+                <div></div>
+                <div class="White"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Side6">
+                <div></div>
+                <div class="Green"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="Cube12">
+            <div class="Side1">
+                <div class="White"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Side6">
+                <div></div>
+                <div></div>
+                <div class="Green"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Side5">
+                <div class="Red"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="Cube13">
+            <div class="Side1">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="White"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Side5">
+                <div></div>
+                <div class="Red"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="Cube14">
+            <div class="Side1">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="White"></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Side5">
+                <div></div>
+                <div></div>
+                <div class="Red"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Side3">
+                <div class="Blue"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="Cube15">
+            <div class="Side6">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Green"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Side5">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Red"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="Cube16">
+            <div class="Side3">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Blue"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Side5">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Red"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="Cube17">
+            <div class="Side6">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Green"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Side4">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Orange"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="Cube18">
+            <div class="Side3">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Blue"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Side4">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Orange"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+
+        <div id="Cube19">
+            <div class="Side2">
+                <div></div>
+                <div class="Yellow"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Side3">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Blue"></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="Cube20">
+            <div class="Side2">
+                <div></div>
+                <div></div>
+                <div class="Yellow"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Side3">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Blue"></div>
+            </div>
+            <div class="Side4">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Orange"></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="Cube21">
+            <div class="Side2">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Yellow"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Side4">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Orange"></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="Cube22">
+            <div class="Side2">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Yellow"></div>
+            </div>
+            <div class="Side6">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Green"></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Side4">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Orange"></div>
+            </div>
+        </div>
+        <div id="Cube23">
+            <div class="Side2">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Yellow"></div>
+                <div></div>
+            </div>
+            <div class="Side6">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Green"></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="Cube24">
+            <div class="Side2">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Yellow"></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Side6">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Green"></div>
+            </div>
+            <div class="Side5">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Red"></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="Cube25">
+            <div class="Side2">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Yellow"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Side5">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Red"></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="Cube26">
+            <div class="Side2">
+                <div class="Yellow"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="Side5">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Red"></div>
+            </div>
+            <div class="Side3">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="Blue"></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+</body>
+<footer>
+</footer>
+
+</html>

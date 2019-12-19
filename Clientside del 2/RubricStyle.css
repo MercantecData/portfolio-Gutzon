@@ -1,0 +1,63 @@
+.White{
+    background-color: #FFF;
+    border: 2px solid black;
+}
+.Yellow{
+    background-color: #ffff00;
+    border: 2px solid black;
+}
+.Red{
+    background-color: #ff0000;
+    border: 2px solid black;
+}
+.Blue{
+    background-color: #0000FF;
+    border: 2px solid black;
+}
+.Green{
+    background-color: #00ff00;
+    border: 2px solid black;
+}
+.Orange{
+    background-color: #ff7f00;
+    border: 2px solid black;
+}
+.Side1{
+    transform: rotatex(90deg) translateX(0px) translateY(0px) translateZ(168px) ;
+}
+.Side2{
+    transform: rotateX(-90deg) translateX(0px) translateY(0px) translateZ(168px);
+}
+.Side3{
+    transform: translateX(0px) translateY(0px) translateZ(168px);
+}
+.Side4{
+    transform: rotateY(90deg) translateX(0px) translateY(0px) translateZ(168px);
+}
+.Side5{
+    transform: rotateY(-90deg) translateX(0px) translateY(0px) translateZ(168px);
+}
+.Side6{
+    transform: rotateY(180deg) translateX(0px) translateY(0px) translateZ(168px);
+}
+#RubriksCube{
+    top: 20%;
+    left: 20%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform-origin: 168px 168px 0px;
+    transform: rotateX(-22deg) rotateY(-38deg) rotateZ(0deg) ;
+}
+#RubriksCube > div{
+    transform-style: preserve-3d;
+    transform-origin: 168px 168px 0px;
+    transition-duration: 1s;
+    
+}
+#RubriksCube > div > div{
+    display: grid;
+    grid-template-columns: 112px 112px 112px;
+    grid-template-rows: 112px 112px 112px;
+    grid-row-gap: 0px;
+    position: absolute;
+}
