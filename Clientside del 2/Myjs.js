@@ -10,6 +10,7 @@ function onload() {
 }
 var number = 0;
 var ColorSelected;
+var cubesState = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var cubesX = [-22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var cubesY = [-28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var cubesZ = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -29,7 +30,30 @@ function rotate(classname, amount) {
         else {
             direction = -1;
         }
-        if (classname == 'White_Side' || classname == 'Yellow_Side') {
+        if (classname == 'White_Side') {
+            if (cube.classList.contains('Blue_Side')) {
+                var n = 0;
+                if (direction == -1) { n = 4 }
+                cube.classList.add(WYCLASS[0 + direction + n] + '_Update');
+                cube.classList.remove('Blue_Side');
+            }
+            if (cube.classList.contains('Green_Side')) {
+                cube.classList.add(WYCLASS[2 + direction] + '_Update');
+                cube.classList.remove('Green_Side');
+            }
+            if (cube.classList.contains('Orange_Side')) {
+                cube.classList.add(WYCLASS[1 + direction] + '_Update');
+                cube.classList.remove('Orange_Side');
+            }
+            if (cube.classList.contains('Red_Side')) {
+                var n = 0;
+                if (direction == 1) { n = -4 }
+                cube.classList.add(WYCLASS[3 + direction + n] + '_Update');
+                cube.classList.remove('Red_Side');
+            }
+            cubesY[cubenr] -= amount;
+        }
+        else if (classname == 'Yellow_Side') {
             if (cube.classList.contains('Blue_Side')) {
                 var n = 0;
                 if (direction == -1) { n = 4 }
@@ -52,7 +76,30 @@ function rotate(classname, amount) {
             }
             cubesY[cubenr] += amount;
         }
-        else if (classname == 'Red_Side' || classname == 'Orange_Side') {
+        else if (classname == 'Red_Side') {
+            if (cube.classList.contains('Blue_Side')) {
+                var n = 0;
+                if (direction == -1) { n = 4 }
+                cube.classList.add(ROCLASS[0 + direction + n] + '_Update');
+                cube.classList.remove('Blue_Side');
+            }
+            if (cube.classList.contains('Green_Side')) {
+                cube.classList.add(ROCLASS[2 + direction] + '_Update');
+                cube.classList.remove('Green_Side');
+            }
+            if (cube.classList.contains('White_Side')) {
+                cube.classList.add(ROCLASS[1 + direction] + '_Update');
+                cube.classList.remove('White_Side');
+            }
+            if (cube.classList.contains('Yellow_Side')) {
+                var n = 0;
+                if (direction == 1) { n = -4 }
+                cube.classList.add(ROCLASS[3 + direction + n] + '_Update');
+                cube.classList.remove('Yellow_Side');
+            }
+            cubesX[cubenr] -= amount;
+        }
+        else if (classname == 'Orange_Side') {
             if (cube.classList.contains('Blue_Side')) {
                 var n = 0;
                 if (direction == -1) { n = 4 }
@@ -75,7 +122,7 @@ function rotate(classname, amount) {
             }
             cubesX[cubenr] += amount;
         }
-        else {
+        else if (classname == 'Blue_Side') {
             if (cube.classList.contains('White_Side')) {
                 var n = 0;
                 if (direction == -1) { n = 4 }
@@ -97,6 +144,29 @@ function rotate(classname, amount) {
                 cube.classList.remove('Red_Side');
             }
             cubesZ[cubenr] += amount;
+        }
+        else {
+            if (cube.classList.contains('White_Side')) {
+                var n = 0;
+                if (direction == -1) { n = 4 }
+                cube.classList.add(BGCLASS[0 + direction + n] + '_Update');
+                cube.classList.remove('White_Side');
+            }
+            if (cube.classList.contains('Orange_Side')) {
+                cube.classList.add(BGCLASS[1 + direction] + '_Update');
+                cube.classList.remove('Orange_Side');
+            }
+            if (cube.classList.contains('Yellow_Side')) {
+                cube.classList.add(BGCLASS[2 + direction] + '_Update');
+                cube.classList.remove('Yellow_Side');
+            }
+            if (cube.classList.contains('Red_Side')) {
+                var n = 0;
+                if (direction == 1) { n = -4 }
+                cube.classList.add(BGCLASS[3 + direction + n] + '_Update');
+                cube.classList.remove('Red_Side');
+            }
+            cubesZ[cubenr] -= amount;
         }
     }
     updatecube()
