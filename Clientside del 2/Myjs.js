@@ -21,7 +21,6 @@ function rotate(classname, amount) {
     while (number > 0) {
         number -= 1;
         var cubenr = document.getElementsByClassName(classname)[number].getAttribute('id').slice(4, 8);
-        document.getElementById('test').innerHTML = classname + ' ' + cubenr + ' ' + number;
         var cube = document.getElementById('Cube' + cubenr);
         var direction;
         if (amount > 0) {
@@ -164,5 +163,4 @@ function SelectColor(color) {
     }
     ColorSelected = color.getAttribute('class');
     color.classList.add('Color_Selected');
-    document.getElementById('test').innerHTML = ColorSelected + '_Side';
 }

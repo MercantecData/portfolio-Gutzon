@@ -15,6 +15,7 @@
     grid-template-columns: 112px 112px 112px 112px 112px 112px;
     grid-template-rows: 112px;
     grid-row-gap: 5px;
+    height: 112px;
     bottom: 10%;
     position: absolute;
     background-color: #000000;
@@ -26,7 +27,7 @@
 #Rotate_Arrows{
     position: absolute;
     bottom: 10%;
-    right: 5%;
+    left: 70%;
     display: grid;
     grid-template-columns: 112px 112px;
     grid-template-rows: 112px;

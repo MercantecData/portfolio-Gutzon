@@ -13,6 +13,12 @@
             $("#RubriksCube").draggable();
         });
         $(function () {
+            $(".ColorSelect").draggable();
+        });
+        $(function () {
+            $("#Rotate_Arrows").draggable();
+        });
+        $(function () {
             $(".slider2").slider({
                 min: 0,
                 max: 500,
@@ -43,12 +49,7 @@
 </head>
 
 <body onload="onload()" style="background-color: grey;">
-    <div id='test' onclick="rotate('Orange_Side', -90)"">back</div>
-    <div onclick=" rotate('Orange_Side', 90)"">test</div>
-    <div onclick="rotate('Blue_Side', -90)"">back</div>
-    <div onclick=" RotateButton(90)">test</div>
-
-    <div id="RubriksCube" class="ui-widget-content">
+    <div id="RubriksCube">
         <div id="Cube1">
             <div class="Side1">
                 <div></div>
