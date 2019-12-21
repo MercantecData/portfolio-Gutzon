@@ -1,61 +1,73 @@
-#wrapD3Cube {
-    width: 250px;
-    height: 213px;
-    margin: 20px auto;
-    background-color: #EEE;
+.slider1{
+    width: 96%;
+    position: absolute !important;
+    bottom: 2%;
+    left: 2%;
 }
-#D3Cube {
-    width: 112px;
-    height: 112px;
-    top: 50px;
-    transform-style: preserve-3d;
-    transform: rotateX(-22deg) rotateY(-38deg) rotateZ(0deg);
-    margin: auto;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: all 0.5s ease-in-out;
+.slider2{
+    height: 92% !important;
+    position: absolute !important;
+    top: 2%;
+    right: 2%;
 }
-#D3Cube > div {
+.ColorSelect{
+    display: grid;
+    grid-template-columns: 112px 112px 112px 112px 112px 112px;
+    grid-template-rows: 112px;
+    grid-row-gap: 5px;
+    bottom: 10%;
     position: absolute;
-    transition: all 0.5s ease-in-out;
-    width: 112px;
-    height: 112px;
-    float: left;
-    overflow: hidden;
-    opacity: 0.85;
+    background-color: #000000;
 }
-#side1 {
-    transform: rotatex(90deg) translateX(0px) translateY(0px) translateZ(56px);
-    background-color: #FFF;
-}
-#side2 {
-    transform: rotateY(-90deg) translateX(0px) translateY(0px) translateZ(56px);
-    background-color: #ffaf1c;
-}
-#side3 {
-    transform: translateX(0px) translateY(0px) translateZ(56px);
-    background-color: #58d568;
-}
-#side4 {
-    transform: rotateY(90deg) translateX(0px) translateY(0px) translateZ(56px);
-    background-color: #ed3030;
-}
-#side5 {
-    transform: rotateY(180deg) translateX(0px) translateY(0px) translateZ(56px);
-    background-color: #1c5ffe;
-}
-#side6 {
-    transform: rotateX(-90deg) translateX(0px) translateY(0px) translateZ(56px);
-    background-color: #f2f215;
+.Color_Selected{
+    opacity: 25%;
 }
 
-
-
-#D3Cube {
-    /*animation: cubeRotation 5s infinite;*/
+#Rotate_Arrows{
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    display: grid;
+    grid-template-columns: 112px 112px;
+    grid-template-rows: 112px;
+    grid-row-gap: 5px;
 }
-@keyframes cubeRotation {
-    0%   {  transform: rotateX(-22deg) rotateY(-38deg) rotateZ(0deg);   }
-    50%   { transform: rotateX(-22deg) rotateY(-238deg) rotateZ(0deg);  }
-    100%   {    transform: rotateX(-22deg) rotateY(-398deg) rotateZ(0deg);  }
+.clockwise{
+    transform: rotateY(180deg);
+}
+.arrow {
+   position: relative;
+   margin: 0 auto;
+   width: 50px;
+}
+  
+.arrow .curve {
+    border: 10px solid rgb(0, 0, 0);
+    border-color: transparent transparent transparent rgb(0, 0, 0);
+    height: 80px;
+    border-radius: 50px 0 0 50px;
+}
+ 
+.arrow .point {
+    position: absolute;
+    left: 40px;
+    top: 60px;
+}
+ 
+.arrow .point:before, .arrow .point:after {
+    border: 10px solid rgb(0, 0, 0);
+    height: 25px;
+    content: "";
+    position: absolute;
+}
+
+.arrow .point:before {
+    top: 10px;
+    right: 10px;
+    transform:rotate(-90deg);
+}
+
+.arrow .point:after {
+    top: -2px;
+    left: -17px;
 }

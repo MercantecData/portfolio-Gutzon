@@ -4,8 +4,38 @@
 <head>
     <link rel="stylesheet" type="text/css" href="RubricStyle.css">
     <link rel="stylesheet" type="text/css" href="Mystyle.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script type="text/javascript" src="Myjs.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#RubriksCube").draggable();
+        });
+        $(function () {
+            $(".slider2").slider({
+                min: 0,
+                max: 500,
+                values: [250],
+                orientation: "vertical",
+                slide: function (event, ui) {
+                    cubesX[0] = ui.values - 250;
+                    UpdateMainCube();
+                }
+            });
+        });
+        $(function () {
+            $(".slider1").slider({
+                min: 0,
+                max: 500,
+                values: [250],
+                slide: function (event, ui) {
+                    cubesY[0] = ui.values - 250;
+                    UpdateMainCube();
+                }
+            });
+        });
+    </script>
     <title>
 
     </title>
@@ -13,12 +43,12 @@
 </head>
 
 <body onload="onload()" style="background-color: grey;">
-<div onclick="rotate('Orange_Side', -90)"">back</div>
-<div onclick="rotate('Orange_Side', 90)"">test</div>
-<div onclick="rotate('Blue_Side', -90)"">back</div>
-<div onclick="rotate('Blue_Side', 90)"">test</div>
+    <div id='test' onclick="rotate('Orange_Side', -90)"">back</div>
+    <div onclick=" rotate('Orange_Side', 90)"">test</div>
+    <div onclick="rotate('Blue_Side', -90)"">back</div>
+    <div onclick=" RotateButton(90)">test</div>
 
-    <div id="RubriksCube">
+    <div id="RubriksCube" class="ui-widget-content">
         <div id="Cube1">
             <div class="Side1">
                 <div></div>
@@ -674,6 +704,26 @@
 
     </div>
 
+    <div class="slider1"></div>
+    <div class="slider2"></div>
+    <div class="ColorSelect">
+        <div onclick="SelectColor(this)" class="White"></div>
+        <div onclick="SelectColor(this)" class="Blue"></div>
+        <div onclick="SelectColor(this)" class="Orange"></div>
+        <div onclick="SelectColor(this)" class="Green"></div>
+        <div onclick="SelectColor(this)" class="Red"></div>
+        <div onclick="SelectColor(this)" class="Yellow"></div>
+    </div>
+    <div id="Rotate_Arrows">
+        <div onclick="RotateButton(-90)" class="arrow">
+            <div class="curve"></div>
+            <div class="point"></div>
+        </div>
+        <div onclick="RotateButton(90)" class="arrow clockwise">
+            <div class="curve"></div>
+            <div class="point"></div>
+        </div>
+    </div>
 </body>
 <footer>
 </footer>
